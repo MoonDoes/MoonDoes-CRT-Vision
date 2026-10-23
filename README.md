@@ -15,6 +15,18 @@ at whole pixels over the window.
 > **Status:** Linux x86_64. Tested with SymphonyRecomp v0.5.1b
 > (RecompOne runtime) on Mesa/radeonsi.
 
+## Screenshots
+
+Captured in-game on a 2560 × 1440 monitor with the MoonDoes_Lite_2 preset.
+Click a picture to open it at full size: the scanlines and the phosphor mask
+only show at 100 %.
+
+<table>
+<tr><td align="center"><a href="docs/screenshots/01-title-screen.png"><img src="docs/screenshots/01-title-screen.png" alt="Title screen (512 × 240)" width="100%"></a><br><sub>Title screen (512 × 240)</sub></td><td align="center"><a href="docs/screenshots/06-intro-castlevania.png"><img src="docs/screenshots/06-intro-castlevania.png" alt="Intro" width="100%"></a><br><sub>Intro</sub></td><td align="center"><a href="docs/screenshots/02-prologue-staircase.png"><img src="docs/screenshots/02-prologue-staircase.png" alt="Prologue — staircase" width="100%"></a><br><sub>Prologue — staircase</sub></td></tr>
+<tr><td align="center"><a href="docs/screenshots/03-prologue-castle-hall.png"><img src="docs/screenshots/03-prologue-castle-hall.png" alt="Prologue — castle hall" width="100%"></a><br><sub>Prologue — castle hall</sub></td><td align="center"><a href="docs/screenshots/04-dracula-dialogue.png"><img src="docs/screenshots/04-dracula-dialogue.png" alt="Prologue — Dracula" width="100%"></a><br><sub>Prologue — Dracula</sub></td><td align="center"><a href="docs/screenshots/05-prologue-beast-fight.png"><img src="docs/screenshots/05-prologue-beast-fight.png" alt="Prologue — the beast" width="100%"></a><br><sub>Prologue — the beast</sub></td></tr>
+<tr><td align="center"><a href="docs/screenshots/07-alucard-hall.png"><img src="docs/screenshots/07-alucard-hall.png" alt="Alucard — entrance hall" width="100%"></a><br><sub>Alucard — entrance hall</sub></td><td align="center"><a href="docs/screenshots/08-alucard-fire.png"><img src="docs/screenshots/08-alucard-fire.png" alt="Alucard — fire" width="100%"></a><br><sub>Alucard — fire</sub></td><td align="center"><a href="docs/screenshots/09-alucard-staircase.png"><img src="docs/screenshots/09-alucard-staircase.png" alt="Alucard — staircase" width="100%"></a><br><sub>Alucard — staircase</sub></td></tr>
+</table>
+
 ## Features
 
 - **Exact source resolution.** The preset always receives the picture the
