@@ -1,0 +1,13 @@
+[package]
+name = "crtvision-gl"
+version = "0.1.0"
+edition = "2021"
+description = "librashader OpenGL runtime behind a small C API, for in-process CRT shading of OpenGL games (SymphonyRecomp mod)"
+license = "GPL-3.0-or-later"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+librashader = { version = "0.12", default-features = false, features = ["runtime-gl", "presets"] }
+glow = "0.17"

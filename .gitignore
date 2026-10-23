@@ -1,0 +1,3 @@
+native/crtvision-gl/target/
+dist/
+*.tmp

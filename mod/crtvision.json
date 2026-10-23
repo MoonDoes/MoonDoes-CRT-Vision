@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "preset": "presets/MoonDoes_Lite_2/MoonDoes_Lite_2.slangp",
+  "params": {
+    "maskstr": 0.3
+  },
+  "cropTop": 20,
+  "cropBottom": 13,
+  "cropLines": 240,
+  "integerScale": true,
+  "onlyFullscreen": true,
+  "menuHotZone": 40,
+  "frameGeneration": false,
+  "glow": true,
+  "glowIntensity": 0.53,
+  "glowThreshold": 0.95,
+  "glowRadius": 3.2
+}

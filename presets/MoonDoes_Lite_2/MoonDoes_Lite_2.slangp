@@ -1,0 +1,295 @@
+shaders = 26
+
+shader0 = shaders_slang/bezel/Mega_Bezel/shaders/guest/extras/hsm-drez-none.slang
+filter_linear0 = false
+srgb_framebuffer0 = true
+scale_type0 = source
+scale_x0 = 1
+scale_y0 = 1
+alias0 = "DerezedPass"
+
+shader1 = shaders_slang/bezel/Mega_Bezel/shaders/base/cache-info-no-reflect-params.slang
+filter_linear1 = false
+scale_type1 = source
+scale1 = 1.0
+alias1 = "InfoCachePass"
+
+shader2 = shaders_slang/bezel/Mega_Bezel/shaders/guest/extras/hsm-fetch-drez-output.slang
+filter_linear2 = false
+srgb_framebuffer2 = true
+scale_type2 = source
+scale_x2 = 1
+scale_y2 = 1
+
+shader3 = shaders_slang/bezel/Mega_Bezel/shaders/guest/extras/hsm-g-sharp_resampler.slang
+
+shader4 = shaders_slang/bezel/Mega_Bezel/shaders/guest/extras/hsm-sharpsmoother.slang
+alias4 = "DeditherPass"
+
+shader5 = shaders_slang/bezel/Mega_Bezel/shaders/base/stock.slang
+alias5 = "XbrSource"
+
+shader6 = shaders_slang/bezel/Mega_Bezel/shaders/hyllian/crt-super-xbr/super-xbr-pass0.slang
+filter_linear6 = "false"
+wrap_mode6 = "clamp_to_border"
+mipmap_input6 = "false"
+float_framebuffer6 = "false"
+srgb_framebuffer6 = "true"
+
+shader7 = shaders_slang/bezel/Mega_Bezel/shaders/hyllian/crt-super-xbr/super-xbr-pass1.slang
+filter_linear7 = "false"
+wrap_mode7 = "clamp_to_border"
+mipmap_input7 = "false"
+alias7 = ""
+float_framebuffer7 = "false"
+srgb_framebuffer7 = "true"
+scale_type_x7 = "source"
+scale_x7 = "2.000000"
+scale_type_y7 = "source"
+scale_y7 = "2.000000"
+
+shader8 = shaders_slang/bezel/Mega_Bezel/shaders/hyllian/crt-super-xbr/super-xbr-pass2.slang
+filter_linear8 = "false"
+wrap_mode8 = "clamp_to_border"
+mipmap_input8 = "false"
+alias8 = ""
+float_framebuffer8 = "false"
+srgb_framebuffer8 = "true"
+scale_type_x8 = "source"
+scale_x8 = "1.000000"
+scale_type_y8 = "source"
+scale_y8 = "1.000000"
+
+shader9 = shaders_slang/bezel/Mega_Bezel/shaders/hyllian/crt-super-xbr/custom-bicubic-x.slang
+filter_linear9 = "false"
+wrap_mode9 = "clamp_to_border"
+mipmap_input9 = "false"
+alias9 = ""
+float_framebuffer9 = "false"
+srgb_framebuffer9 = "true"
+scale_type_x9 = "source"
+scale_x9 = "1.000000"
+scale_type_y9 = "source"
+scale_y9 = "1.000000"
+
+shader10 = shaders_slang/bezel/Mega_Bezel/shaders/hyllian/crt-super-xbr/custom-bicubic-y.slang
+filter_linear10 = false
+scale_type_x10 = source
+scale_x10 = 1
+scale_type_y10 = source
+scale_y10 = 0.5
+wrap_mode10 = "clamp_to_edge"
+
+shader11 = shaders_slang/bezel/Mega_Bezel/shaders/base/stock.slang
+alias11 = "PreCRTPass"
+
+shader12 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-afterglow0.slang
+filter_linear12 = true
+scale_type12 = source
+scale12 = 1.0
+alias12 = "AfterglowPass"
+
+shader13 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-pre-shaders-afterglow.slang
+filter_linear13 = true
+scale_type13 = source
+mipmap_input13 = true
+scale13 = 1.0
+
+shader14 = shaders_slang/bezel/Mega_Bezel/shaders/dogway/hsm-grade.slang
+filter_linear14 = false
+scale_type14 = source
+scale14 = 1.0
+alias14 = "ColorCorrectPass"
+
+shader15 = shaders_slang/bezel/Mega_Bezel/shaders/base/stock.slang
+filter_linear15 = true
+scale_type15 = source
+scale_x15 = 1.0
+scale_y15 = 1.0
+alias15 = "PrePass"
+mipmap_input15 = true
+
+shader16 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-avg-lum.slang
+filter_linear16 = true
+scale_type16 = source
+scale16 = 1.0
+mipmap_input16 = true
+alias16 = "AvgLumPass"
+
+shader17 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-interlace-and-linearize.slang
+filter_linear17 = true
+scale_type17 = source
+scale17 = 1.0
+float_framebuffer17 = true
+alias17 = "LinearizePass"
+
+shader18 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-gaussian_horizontal.slang
+filter_linear18 = true
+scale_type_x18 = absolute
+scale_x18 = 800.0
+scale_type_y18 = source
+scale_y18 = 1.0
+float_framebuffer18 = true
+
+shader19 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-gaussian_vertical.slang
+filter_linear19 = true
+scale_type_x19 = absolute
+scale_x19 = 800.0
+scale_type_y19 = absolute
+scale_y19 = 600.0
+float_framebuffer19 = true
+alias19 = "GlowPass"
+
+shader20 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-bloom_horizontal.slang
+filter_linear20 = true
+scale_type_x20 = absolute
+scale_x20 = 800.0
+scale_type_y20 = absolute
+scale_y20 = 600.0
+float_framebuffer20 = true
+
+shader21 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-bloom_vertical.slang
+filter_linear21 = true
+scale_type_x21 = source
+scale_x21 = 1.0
+scale_type_y21 = source
+scale_y21 = 1.0
+float_framebuffer21 = true
+alias21 = "BloomPass"
+
+shader22 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-crt-guest-advanced-no-reflect.slang
+filter_linear22 = true
+scale_type22 = viewport
+scale_x22 = 1.0
+scale_y22 = 1.0
+float_framebuffer22 = true
+
+shader23 = shaders_slang/bezel/Mega_Bezel/shaders/guest/hsm-deconvergence-no-reflect.slang
+filter_linear23 = true
+scale_type23 = viewport
+scale_x23 = 1.0
+scale_y23 = 1.0
+float_framebuffer23 = true
+alias23 = "CRTPass"
+
+shader24 = shaders_slang/bezel/Mega_Bezel/shaders/base/post-crt-prep-no-reflect.slang
+mipmap_input24 = true
+scale_type24 = viewport
+float_framebuffer24 = true
+alias24 = "PostCRTPass"
+
+shader25 = shaders_slang/bezel/Mega_Bezel/shaders/base/output-sdr.slang
+alias25 = "OutputPass"
+
+textures = "SamplerLUT1;SamplerLUT2;SamplerLUT3;SamplerLUT4;ScreenPlacementImage;TubeDiffuseImage;TubeColoredGelImage;TubeShadowImage;TubeStaticReflectionImage;BackgroundImage;BackgroundVertImage;NightLightingImage;NightLighting2Image;"
+
+SamplerLUT1 = shaders_slang/bezel/Mega_Bezel/shaders/guest/lut/trinitron-lut.png
+SamplerLUT1_linear = true
+SamplerLUT2 = shaders_slang/bezel/Mega_Bezel/shaders/guest/lut/inv-trinitron-lut.png
+SamplerLUT2_linear = true
+SamplerLUT3 = shaders_slang/bezel/Mega_Bezel/shaders/guest/lut/nec-lut.png
+SamplerLUT3_linear = true
+SamplerLUT4 = shaders_slang/bezel/Mega_Bezel/shaders/guest/lut/ntsc-lut.png
+SamplerLUT4_linear = true
+
+ScreenPlacementImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+ScreenPlacementImage_linear = false
+
+TubeDiffuseImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+TubeDiffuseImage_linear = true
+TubeDiffuseImage_mipmap = 1
+
+TubeColoredGelImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+TubeColoredGelImage_linear = true
+TubeColoredGelImage_mipmap = 1
+
+TubeShadowImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+TubeShadowImage_linear = true
+TubeShadowImage_mipmap = 1
+
+TubeStaticReflectionImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+TubeStaticReflectionImage_linear = true
+TubeStaticReflectionImage_mipmap = 1
+
+BackgroundImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+BackgroundImage_linear = true
+BackgroundImage_mipmap = 1
+
+BackgroundVertImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+BackgroundVertImage_linear = true
+BackgroundVertImage_mipmap = 1
+
+NightLightingImage = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+NightLightingImage_linear = true
+NightLightingImage_mipmap = 1
+
+NightLighting2Image = shaders_slang/bezel/Mega_Bezel/shaders/textures/Placeholder_Transparent_16x16.png
+NightLighting2Image_linear = true
+NightLighting2Image_mipmap = 1
+
+GAMMA_INPUT = "2.400000"
+gamma_out = "2.280000"
+post_br = "1.150000"
+SHARPEN_ON = "0.000000"
+CCONTR = "0.050000"
+CSHARPEN = "0.700000"
+HSM_ASPECT_RATIO_MODE = "6.000000"
+HSM_NON_INTEGER_SCALE = "100.000000"
+HSM_CORE_RES_SAMPLING_MULT_SCANLINE_DIR = "400.000000"
+HSM_CURVATURE_MODE = "0.000000"
+HSM_SCREEN_VIGNETTE_ON = "0.000000"
+HSM_SCREEN_VIGNETTE_STRENGTH = "0.000000"
+HSM_SCREEN_VIGNETTE_POWER = "12.000000"
+HSM_GLOBAL_CORNER_RADIUS = "0.000000"
+HSM_SCREEN_CORNER_RADIUS_SCALE = "5.000000"
+HSM_VIEWPORT_VIGNETTE_OPACITY = "0.000000"
+HSM_INTRO_WHEN_TO_SHOW = "0.000000"
+HSM_INTRO_LOGO_BLEND_MODE = "0.000000"
+HSM_INTRO_SOLID_COLOR_BLEND_MODE = "0.000000"
+HSM_INTRO_NOISE_BLEND_MODE = "0.000000"
+GSHARP_ON = "1.000000"
+SIGMA_HV = "1.160000"
+SHAR = "0.150000"
+HAR = "0.400000"
+max_w = "0.000000"
+smoot = "0.380000"
+MODE = "0.000000"
+PR = "0.330000"
+PG = "0.330000"
+PB = "0.330000"
+AS = "0.500000"
+sat = "0.030000"
+g_CRT_l = "2.400000"
+g_cntrst = "0.250000"
+g_mid = "0.750000"
+g_lift = "-2.000000"
+g_lum = "0.000000"
+g_sat = "0.060000"
+gamma_c = "1.000000"
+sth = "0.230000"
+XBR_WEIGHT = "0.500000"
+XBR_EDGE_SHP = "0.500000"
+SGPT_BLEND_OPTION = "0.000000"
+wp_saturation = "1.020000"
+glow = "0.010000"
+hmask1 = "0.000000"
+brightboost = "2.400000"
+brightboost1 = "1.180000"
+clips = "0.050000"
+gsl = "2.000000"
+scanline1 = "8.000000"
+scanline2 = "35.000000"
+beam_min = "1.150000"
+beam_max = "1.000000"
+scan_falloff = "1.100000"
+ssharp = "0.280000"
+h_sharp = "15.000000"
+shadowMask = "8.000000"
+maskstr = "0.300000"
+mcut = "0.400000"
+masksize = "1.000000"
+GDV_DECONVERGENCE_ON = "1.000000"
+deconrr = "0.080000"
+deconrg = "-0.080000"
+deconrb = "-0.080000"
+deconrry = "-0.080000"
