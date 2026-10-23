@@ -14,7 +14,7 @@ echo "==> Building libcrtvision_gl.so (librashader OpenGL runtime)"
 echo "==> Assembling $OUT"
 rm -rf "$OUT"
 mkdir -p "$OUT/native" "$OUT/presets" "$OUT/LICENSES"
-cp "$ROOT/mod/mod.json" "$ROOT/mod/crtvision.json" "$OUT/"
+cp "$ROOT/mod/mod.json" "$ROOT/mod/crtvision.json" "$ROOT/mod/mod-icon.png" "$OUT/"
 cp -a "$ROOT/mod/source" "$OUT/"
 cp "$ROOT/native/crtvision-gl/target/release/libcrtvision_gl.so" "$OUT/native/"
 strip --strip-unneeded "$OUT/native/libcrtvision_gl.so" 2>/dev/null || true

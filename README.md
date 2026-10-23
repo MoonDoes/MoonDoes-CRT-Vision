@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/icon.png" alt="MoonDoes CRT-Vision" width="200"></p>
+
 # MoonDoes CRT-Vision
 
 A **SymphonyRecomp** mod that runs RetroArch `.slangp` CRT shader presets —
