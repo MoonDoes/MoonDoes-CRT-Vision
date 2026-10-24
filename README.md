@@ -238,8 +238,9 @@ have to load the right file. Not done yet.
 ## Credits
 
 This mod stands on the work of many people — see [`CREDITS.md`](CREDITS.md).
-Above all, thanks to **HyperspaceMadness** (Mega Bezel) and **guest(r)**
-(CRT-Guest-Advanced), whose shaders are the heart of the CRT look.
+Above all, thanks to **HyperspaceMadness** (Mega Bezel), **guest(r)**
+(CRT-Guest-Advanced) and **Hyllian** (Super-xBR), whose shaders are the heart
+of the CRT look.
 
 ## License
 

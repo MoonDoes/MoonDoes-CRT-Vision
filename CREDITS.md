@@ -17,7 +17,11 @@ chain. Every shader keeps its original header, copyright and license.
   phosphor masks, bloom, halation, afterglow, interlace and linearize,
   deconvergence, gaussian passes; also the G-sharp resampler and
   sharpsmoother. With contributions and ideas from **Dr. Venom**.
-- **Hyllian** — *Super-xBR* and the custom bicubic passes (crt-super-xbr).
+- **Hyllian** — *Super-xBR* (2015), the edge-directed upscaler the chain
+  uses to smooth the PlayStation's pixels before the CRT, and its custom
+  bicubic passes (crt-super-xbr). Hyllian created the whole xBR family of
+  pixel-art scalers and many libretro shaders, crt-hyllian among them.
+  https://forums.libretro.com/t/xbr-algorithm-tutorial/123
 - **Dogway (Jose Linares)** — *Grade*: colour grading, gamut and gamma.
 - **cgwg**, **TroggleMonkey**, **Sp00kyFox** — functions and code credited in
   the shader headers.
