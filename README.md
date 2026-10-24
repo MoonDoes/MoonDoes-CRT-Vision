@@ -42,10 +42,16 @@ only show at 100 %.
   effects touching the bands do not make the picture jump.
 - **Fullscreen only.** In windowed mode, or while the mouse is on the menu bar
   or a menu is open, the recomp's own interface is shown untouched.
-- **Emissive light (optional).** Bright, coloured pixels (candles, torches,
-  magic) light up their surroundings, on the native picture before the CRT
-  pass, so the glow gets scanlines and mask like everything else.
+- **Dynamic lighting, in three groups.** The game's own fire, read from SOTN's
+  object table — the rooms' candles and torches (on by default), the fire
+  enemies burst into when destroyed, and fire attacks (not magic), each turned
+  on and tuned separately — glows and lights up the surfaces around it, on the native picture before the CRT pass, so the
+  light gets scanlines and mask like everything else. Characters are lit when
+  they stand near a light, but never glow by themselves.
 - **Frame generation 60 → 120 (experimental, off by default).** See below.
+- **Load any `.slangp` preset.** A built-in browser (Browse…) loads Mega Bezel
+  and RetroArch slang presets exactly as they are configured; Default goes
+  back to MoonDoes_Lite_2. See *Loading other presets* below.
 - About **0.2–0.3 ms** of CPU per frame; the game keeps its 60 fps.
 
 ## Installation (players)
@@ -65,23 +71,91 @@ Mods → MoonDoes CRT-Vision → gear icon. Settings are saved in
 | CRT enabled (fullscreen) | on | |
 | Mask strength | 0.30 | Phosphor mask (`maskstr`); lower is softer |
 | Frame generation 60 → 120 (experimental) | off | Linux only, needs VRR; see below |
-| Emissive light (candles, torches, magic) | on | |
-| Light intensity | 0.53 | 0 – 2 |
-| Threshold (what glows) | 0.95 | Brightness from which a pixel emits light |
-| Radius (reach) | 3.2 px | In native PSX pixels |
+| Candles and torches (any flame colour) | on | The rooms' lights while they burn |
+| Death fire (destroyed enemies and broken candles) | off | The fire enemies and candles burst into when destroyed |
+| Fire attacks (player and enemies, not magic) | off | Every fire attack |
+| ↳ Intensity (each group) | 0.95 / 0.51 / 0.53 | All the group's light, halo and room (0 – 2; 0 is off) |
+| ↳ Halo radius (each group) | 3.4 / 2.6 / 2.6 px | Glow around each source itself, in native PSX pixels |
+| ↳ Room lighting (each group) | 1.62 / 0.80 / 0.85 | How much the sources light up the surfaces around them (0 – 2) |
+| ↳ Light reach (each group) | 19 / 9 / 10 px | How far that light goes, in native PSX pixels |
+| Restore all defaults | — | Every option and the default preset back to how the mod ships (the crop and fullscreen settings of the profile stay) |
 | Integer vertical scale | on | Whole multiples of the picture's lines |
+| Crop the game's black bands | on | In gameplay, fill the screen height once the bands stay empty; off always shows the whole picture |
 
-`crtvision.json` also holds `preset` (absolute, or relative to the mod
-folder), `params` (any preset parameter), and the crop settings
-(`cropTop`, `cropBottom`, `cropLines`).
+`crtvision.json` also holds `preset` and `defaultPreset` (absolute, or
+relative to the mod folder), `params` (overrides for the default preset),
+`browseFolder`, the crop settings (`cropTop`, `cropBottom`, `cropLines`), the
+light lists, and `debugLights` (the debug view, see
+[docs/LIGHT-SOURCES.md](docs/LIGHT-SOURCES.md)).
 
-### Emissive light
+While the mod is on, the screen does not blank or lock on Linux (GNOME): the
+desktop only counts keyboard and mouse as activity, not a gamepad, so the mod
+holds an idle inhibition while the game runs. Turning the mod off in the Mods
+menu releases it.
 
-A separable gaussian of the picture's bright pixels, added with a screen blend.
-Coloured light (fire, magic) is favoured over white and grey (text, stone).
-It is a 2D effect working on the final picture: it cannot tell a light from a
-very bright, saturated sprite, so some characters may glow slightly. Raise the
-threshold if that bothers you.
+### Loading other presets
+
+**Browse…** opens a file browser inside the game, with shortcuts to the mod's
+presets, RetroArch's shader folders (native, Flatpak, Snap) when present, and
+the last folder used. Double-click a `.slangp` to load it; **Default** returns
+to the bundled MoonDoes_Lite_2. The choice is saved in `crtvision.json`.
+
+- Presets load **exactly as configured**: the mask strength slider and the
+  `params` overrides only apply to the default preset.
+- **Mega Bezel presets** that place the screen themselves (bezels,
+  reflections; any Mega Bezel aspect mode other than *Full*) get the whole
+  window, as in RetroArch. Every other preset is drawn in the CRT area, at
+  integer scale with the gameplay crop, like RetroArch with the core's aspect
+  ratio. Mega Bezel stretches the 256-column gameplay to 4:3, as a PlayStation
+  did on a TV.
+- Only **`.slang`** presets work (librashader); the old `.glsl` and `.cg`
+  ones do not. The first compile of a large preset takes a few seconds (the
+  game pauses); librashader caches it, so later loads are faster. A preset
+  that fails to load leaves the current one running and shows the error.
+- Tested with Mega Bezel `MBZ__3__STD`, `crt-guest-advanced` and RetroArch
+  MoonDoes presets: 60 fps, and 120 with frame generation, on an RX 9070 XT.
+
+### Dynamic lighting
+
+**Where the light comes from.** Every frame the mod walks SOTN's object table
+(`Sotn.Entities`) and keeps only the ones that burn, in three groups that are
+turned on and tuned separately (intensity, halo radius, room lighting, reach):
+
+- **Candles and torches**: each stage's breakable object while its flame
+  animates, whatever its colour (vases and busts are the same object but never
+  animate), and objects named Candle, Torch or Lamp.
+- **Death fire**: the fire an enemy bursts into when destroyed, and the flames a
+  candle bursts into when broken.
+- **Fire attacks**: every other fire, the player's and the enemies'.
+
+Fire is recognised by name (flames, fireballs, explosions, Hellfire…, resolved
+through the recomp's symbol table in the overlay of the stage being played,
+since stages share addresses); objects named after anything else (water,
+dust, after-images, lightning and other magic) never give light. A broken
+candle's flame, a dying enemy's fire and an attack's are often the same
+explosion object, so they are told apart by being born where a lit candle has
+just broken or an enemy has just died. Their hitboxes become light areas; only
+the bright pixels inside them emit, so a character standing next to a candle
+never shines on its own: on candelabras only the band of the flames emits, and
+on the life gauges only the flame's own hue does, so a character or a gauge in
+front of a flame is lit by it but never becomes a light source.
+
+**Adding or removing light sources.** The debug view (`debugLights: true` in
+`crtvision.json`) names every object on
+screen with its group, and lists in `crtvision.json` (each group's `always`,
+and `lightNever`) add or remove any of them, without touching code. The full
+guide is [docs/LIGHT-SOURCES.md](docs/LIGHT-SOURCES.md).
+
+**How it lights.** For each group, two separable gaussians of its emitters, on
+the native picture with a 128-pixel margin around it, so sources off screen
+light it as they would from there. Candles keep shining as they scroll out and
+are lit before they scroll in: the mod remembers each kind of candle seen
+burning in the stage, with its flame colour, and where each lit candle stands
+in the room. The light is worked out as a small gaussian added as a halo (screen blend), and a wide one
+(*Light reach*) multiplied with the surfaces it reaches, so walls, floors and
+characters near a light take its colour, like under a real lamp. Coloured light
+is favoured over white and grey. It is 2D lighting, not ray tracing: light is
+not blocked by walls.
 
 ### Frame generation (experimental)
 

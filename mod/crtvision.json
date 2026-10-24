@@ -4,6 +4,7 @@
   "params": {
     "maskstr": 0.3
   },
+  "cropBands": true,
   "cropTop": 20,
   "cropBottom": 13,
   "cropLines": 240,
@@ -11,8 +12,41 @@
   "onlyFullscreen": true,
   "menuHotZone": 40,
   "frameGeneration": false,
-  "glow": true,
-  "glowIntensity": 0.53,
-  "glowThreshold": 0.95,
-  "glowRadius": 3.2
+  "defaultPreset": "presets/MoonDoes_Lite_2/MoonDoes_Lite_2.slangp",
+  "browseFolder": "",
+  "debugLights": false,
+  "lightNever": [],
+  "candleLight": {
+    "enabled": true,
+    "intensity": 0.95,
+    "radius": 3.4,
+    "room": 1.62,
+    "reach": 19,
+    "always": [
+      "NP3_EntityBackgroundBlock",
+      "NO3_EntityBackgroundBlock",
+      "LightningThunder"
+    ]
+  },
+  "deathFireLight": {
+    "enabled": false,
+    "intensity": 0.51,
+    "radius": 2.6,
+    "room": 0.8,
+    "reach": 9,
+    "always": [
+      "DeadMerman"
+    ]
+  },
+  "fireAttackLight": {
+    "enabled": false,
+    "intensity": 0.53,
+    "radius": 2.6,
+    "room": 0.85,
+    "reach": 10,
+    "always": [
+      "MediumWaterSplash",
+      "UnkId24"
+    ]
+  }
 }

@@ -27,19 +27,29 @@ Mods → MoonDoes CRT-Vision → gear icon:
 
 - **CRT enabled**, **Mask strength**, **Integer vertical scale** (exact steps:
   6× at 1440p, 4× at 1080p).
-- **Emissive light**: candles, torches and magic light up their surroundings.
-  Intensity, threshold and radius are adjustable. Being a 2D effect, some very
-  bright colours that are not lights may glow a little too; raise the
-  threshold if it bothers you.
+- **Crop the game's black bands**: on by default. In gameplay the picture
+  fills the screen height once the game's own bands have stayed empty for half
+  a second; turn it off to always see the whole picture.
+- **Dynamic light**: the game's own fire glows and lights up the surfaces
+  around it, in three groups turned on separately: **Candles and torches**
+  (on by default, any flame colour), **Death fire** (destroyed enemies and
+  broken candles, off by default) and **Fire attacks** (player and enemies,
+  not magic, off by default). Each has its own **Intensity**, **Halo radius**, **Room
+  lighting** and **Light reach**. Characters never glow by themselves. See
+  [LIGHT-SOURCES.md](LIGHT-SOURCES.md) to add or remove light sources.
 - **Frame generation 60 → 120 (EXPERIMENTAL)**: off by default. Linux only.
   Requires **Variable Refresh Rate** (VRR / FreeSync / G-Sync) enabled in the
   system and the monitor — in GNOME: Settings → Displays → Variable Refresh
   Rate. May cause occasional flicker and adds about 8 ms of latency. The game
   speed does not change.
 
-In gameplay, once the game's own black bands have stayed empty for half a
-second, the picture fills the screen height; title and menus are shown whole
-in 4:3.
+- **Preset: Browse… / Default**: load any Mega Bezel or RetroArch `.slang`
+  preset from a browser inside the game, exactly as it is configured (Mega
+  Bezel presets with bezels get the whole window). Default goes back to
+  MoonDoes_Lite_2. Only `.slang` presets work; a large preset takes a few
+  seconds to compile the first time.
+
+Title and menus are always shown whole in 4:3.
 
 Settings are saved in `crtvision.json`. To use another `.slangp` preset,
 change `preset` (absolute path, or relative to the mod folder).
