@@ -21,10 +21,26 @@ Captured in-game on a 2560 × 1440 monitor with the MoonDoes_Lite_2 preset.
 Click a picture to open it at full size: the scanlines and the phosphor mask
 only show at 100 %.
 
+### Before and after
+
+Castle entrance — the game as it is, with the CRT preset, and with the CRT
+preset and the dynamic light (candles and torches):
+
 <table>
-<tr><td align="center"><a href="docs/screenshots/01-title-screen.png"><img src="docs/screenshots/01-title-screen.png" alt="Title screen (512 × 240)" width="100%"></a><br><sub>Title screen (512 × 240)</sub></td><td align="center"><a href="docs/screenshots/06-intro-castlevania.png"><img src="docs/screenshots/06-intro-castlevania.png" alt="Intro" width="100%"></a><br><sub>Intro</sub></td><td align="center"><a href="docs/screenshots/02-prologue-staircase.png"><img src="docs/screenshots/02-prologue-staircase.png" alt="Prologue — staircase" width="100%"></a><br><sub>Prologue — staircase</sub></td></tr>
-<tr><td align="center"><a href="docs/screenshots/03-prologue-castle-hall.png"><img src="docs/screenshots/03-prologue-castle-hall.png" alt="Prologue — castle hall" width="100%"></a><br><sub>Prologue — castle hall</sub></td><td align="center"><a href="docs/screenshots/04-dracula-dialogue.png"><img src="docs/screenshots/04-dracula-dialogue.png" alt="Prologue — Dracula" width="100%"></a><br><sub>Prologue — Dracula</sub></td><td align="center"><a href="docs/screenshots/05-prologue-beast-fight.png"><img src="docs/screenshots/05-prologue-beast-fight.png" alt="Prologue — the beast" width="100%"></a><br><sub>Prologue — the beast</sub></td></tr>
-<tr><td align="center"><a href="docs/screenshots/07-alucard-hall.png"><img src="docs/screenshots/07-alucard-hall.png" alt="Alucard — entrance hall" width="100%"></a><br><sub>Alucard — entrance hall</sub></td><td align="center"><a href="docs/screenshots/08-alucard-fire.png"><img src="docs/screenshots/08-alucard-fire.png" alt="Alucard — fire" width="100%"></a><br><sub>Alucard — fire</sub></td><td align="center"><a href="docs/screenshots/09-alucard-staircase.png"><img src="docs/screenshots/09-alucard-staircase.png" alt="Alucard — staircase" width="100%"></a><br><sub>Alucard — staircase</sub></td></tr>
+<tr><td align="center"><a href="docs/screenshots/entrance-1-no-mod.png"><img src="docs/screenshots/entrance-1-no-mod.png" alt="Without the mod" width="100%"></a><br><sub>Without the mod</sub></td><td align="center"><a href="docs/screenshots/entrance-2-crt.png"><img src="docs/screenshots/entrance-2-crt.png" alt="CRT" width="100%"></a><br><sub>CRT</sub></td><td align="center"><a href="docs/screenshots/entrance-3-crt-light.png"><img src="docs/screenshots/entrance-3-crt-light.png" alt="CRT + dynamic light" width="100%"></a><br><sub>CRT + dynamic light</sub></td></tr>
+</table>
+
+Prologue — the CRT preset alone, and with the dynamic light:
+
+<table>
+<tr><td align="center"><a href="docs/screenshots/prologue-1-crt.png"><img src="docs/screenshots/prologue-1-crt.png" alt="CRT" width="100%"></a><br><sub>CRT</sub></td><td align="center"><a href="docs/screenshots/prologue-2-crt-light.png"><img src="docs/screenshots/prologue-2-crt-light.png" alt="CRT + dynamic light" width="100%"></a><br><sub>CRT + dynamic light</sub></td></tr>
+</table>
+
+### Gallery
+
+<table>
+<tr><td align="center"><a href="docs/screenshots/title-screen.png"><img src="docs/screenshots/title-screen.png" alt="Title screen (512 × 240)" width="100%"></a><br><sub>Title screen (512 × 240)</sub></td><td align="center"><a href="docs/screenshots/intro.png"><img src="docs/screenshots/intro.png" alt="Intro" width="100%"></a><br><sub>Intro</sub></td><td align="center"><a href="docs/screenshots/richter-dialogue.png"><img src="docs/screenshots/richter-dialogue.png" alt="Prologue — Richter" width="100%"></a><br><sub>Prologue — Richter</sub></td></tr>
+<tr><td align="center"><a href="docs/screenshots/dracula-dialogue.png"><img src="docs/screenshots/dracula-dialogue.png" alt="Prologue — Dracula" width="100%"></a><br><sub>Prologue — Dracula</sub></td><td align="center"><a href="docs/screenshots/dracula-fireballs.png"><img src="docs/screenshots/dracula-fireballs.png" alt="Prologue — Dracula's fireballs" width="100%"></a><br><sub>Prologue — Dracula's fireballs</sub></td><td align="center"><a href="docs/screenshots/castle-entrance-lightning.png"><img src="docs/screenshots/castle-entrance-lightning.png" alt="Castle entrance — lightning" width="100%"></a><br><sub>Castle entrance — lightning</sub></td></tr>
 </table>
 
 ## Features
