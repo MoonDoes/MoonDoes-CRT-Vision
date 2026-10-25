@@ -1,7 +1,7 @@
 {
     "id": "crtvision",
     "name": "MoonDoes CRT-Vision",
-    "version": "1.0",
+    "version": "1.1",
     "author": "MoonDoes",
     "description": "RetroArch .slangp CRT presets (MoonDoes, Mega Bezel based) on the native PSX picture, via librashader OpenGL, in fullscreen.",
     "dependencies": []

@@ -13,5 +13,6 @@ rm -rf "$STAGE" "$ZIP"
 mkdir -p "$STAGE"
 cp -a "$ROOT/dist/crtvision" "$STAGE/"
 cp "$ROOT/docs/INSTALL.md" "$STAGE/README.md"
+cp "$ROOT/docs/LIGHT-SOURCES.md" "$STAGE/LIGHT-SOURCES.md"
 (cd "$ROOT/dist" && python3 -m zipfile -c "$ZIP" MoonDoes-CRT-Vision)
 echo "==> Package: $ZIP"
